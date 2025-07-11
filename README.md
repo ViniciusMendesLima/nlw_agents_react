@@ -45,7 +45,7 @@ npm run dev
 O app estará disponível em: http://localhost:5173
 
 ## 🧪 Observações
-- Certifique-se de que a API do NLW Agents (back-end) esteja rodando corretamente para que o front-end funcione.
+- Certifique-se de que a API do [NLW Agents (back-end)](https://github.com/ViniciusMendesLima/nlw_agents) esteja rodando corretamente para que o front-end funcione.
 
 - Algumas funcionalidades dependem da transcrição de áudios e IA, fornecidas por uma API customizada (ex: com Gemini ou OpenAI).
 ## 📁 Estrutura principal
