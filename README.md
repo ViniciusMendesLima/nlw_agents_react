@@ -1,16 +1,20 @@
 # NLW Agents
 
-Este projeto foi desenvolvido durante o evento **NLW da Rocketseat** e se chama **NLW Agents**. A aplicação é construída com **React**, utilizando **TypeScript**, **Tailwind CSS**, **Vite** e outras ferramentas modernas do ecossistema web.
+Este projeto foi desenvolvido durante o evento **NLW (Next Level Week)** promovido pela [Rocketseat](https://www.rocketseat.com.br/).
+
+O **NLW Agents** é uma aplicação web que permite o envio de perguntas para salas específicas, com respostas geradas por inteligência artificial. A aplicação se comunica com uma API e utiliza IA para gerar respostas com base em áudios transcritos.
 
 ## 🔧 Tecnologias e Ferramentas
 
-- **React 19** – Biblioteca para construção de interfaces de usuário.
-- **TypeScript** – Tipagem estática para JavaScript.
-- **Vite** – Bundler moderno e rápido para desenvolvimento.
-- **Tailwind CSS** – Framework utilitário para estilização rápida.
-- **@vitejs/plugin-react** – Suporte oficial do React no Vite.
-- **@biomejs/biome** – Linter e formatter para manter qualidade de código.
-- **Ultracite** – Ferramenta moderna para testes e análise de código.
+- **React** (com Vite)
+- **TypeScript**
+- **Tailwind CSS**
+- **ShadCN UI** (componentes UI)
+- **React Query** (`@tanstack/react-query`) – gerenciamento de requisições assíncronas
+- **React Hook Form** – formulários
+- **Zod** – validação de dados
+- **Lucide React** – ícones
+- **Dayjs** – manipulação de datas
 
 ## 🧱 Padrões e Estrutura
 
@@ -30,6 +34,8 @@ cd nlw_agents_react
 2. **Instale as dependências**
 ```bash
 npm install
+# ou
+yarn
 ```
 
 3. **Execute o projeto em modo de desenvolvimento**
@@ -38,21 +44,19 @@ npm run dev
 ```
 O app estará disponível em: http://localhost:5173
 
-4. **Build para produção**
-```bash
-npm run build
-```
-5. **Pré-visualização da build**
-```bash
-npm run preview
-```
+## 🧪 Observações
+- Certifique-se de que a API do NLW Agents (back-end) esteja rodando corretamente para que o front-end funcione.
+
+- Algumas funcionalidades dependem da transcrição de áudios e IA, fornecidas por uma API customizada (ex: com Gemini ou OpenAI).
 ## 📁 Estrutura principal
 
 ```bash
 src/
 ├── components/       # Componentes reutilizáveis
+├── http/              # Hooks de comunicação com API
+├── lib/               # Configurações auxiliares (ex: dayjs)
 ├── pages/            # Páginas principais
-├── styles/           # Estilos (Tailwind)
+├── index.css/           # Estilos (Tailwind)
 ├── App.tsx           # Componente raiz
 ├── main.tsx          # Ponto de entrada
 vite.config.ts        # Configuração do Vite
@@ -60,12 +64,6 @@ tsconfig.json         # Configuração do TypeScript
 ```
 
 
-## 📌 Observações
-- O projeto usa moduleResolution: "bundler" no TypeScript para melhor compatibilidade com Vite e ESM.
-
-- Lint e formatação automática com Biome.
-
-- Tipagem rigorosa com strict: true.
-
-Feito com 💜 durante o NLW da Rocketseat
+## 📄 Licença
+Este projeto é apenas para fins educacionais, desenvolvido durante o evento NLW da Rocketseat.
 
