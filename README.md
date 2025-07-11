@@ -51,16 +51,27 @@ O app estará disponível em: http://localhost:5173
 ## 📁 Estrutura principal
 
 ```bash
-src/
-├── components/       # Componentes reutilizáveis
-├── http/              # Hooks de comunicação com API
-├── lib/               # Configurações auxiliares (ex: dayjs)
-├── pages/            # Páginas principais
-├── index.css/           # Estilos (Tailwind)
-├── App.tsx           # Componente raiz
-├── main.tsx          # Ponto de entrada
-vite.config.ts        # Configuração do Vite
-tsconfig.json         # Configuração do TypeScript
+├── src
+│   ├── components          # Componentes reutilizáveis da UI
+│   ├── http                # Hooks e configurações para requisições HTTP (ex: useFetch, useMutation)
+│   ├── lib                 # Utilitários e configurações globais (ex: dayjs, axios, etc)
+│   ├── pages               # Páginas principais da aplicação
+│   ├── app.tsx            # Componente raiz da aplicação
+│   ├── index.css          # Estilos globais
+│   ├── main.tsx           # Ponto de entrada da aplicação React (inicialização do ReactDOM)
+│   └── vite-env.d.ts      # Tipagens do Vite (gerado automaticamente)
+│
+├── .gitignore              # Arquivos/pastas ignorados pelo Git
+├── README.md               # Documentação do projeto
+├── biome.jsonc             # Configurações do Biome (formatação e linting)
+├── components.json         # Config do ShadCN (se estiver usando)
+├── index.html              # HTML base da aplicação (Vite usa isso como template)
+├── package.json            # Dependências e scripts do projeto
+├── package-lock.json       # Versão travada das dependências
+├── tsconfig.json           # Configuração principal do TypeScript
+├── tsconfig.app.json       # Configuração específica para o app (herda de tsconfig.json)
+├── tsconfig.node.json      # Configuração específica para ambientes Node.js (separação útil com backend)
+└── vite.config.ts          # Configuração do Vite (build, plugins, aliases, etc)
 ```
 
 
